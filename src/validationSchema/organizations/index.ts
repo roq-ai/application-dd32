@@ -1,0 +1,10 @@
+import * as yup from 'yup';
+
+export const organizationValidationSchema = yup.object().shape({
+  description: yup.string().nullable(),
+  date_created: yup.date().nullable(),
+  last_updated: yup.date().nullable(),
+  status: yup.string().nullable(),
+  name: yup.string().required(),
+  user_id: yup.string().nullable().required(),
+});
